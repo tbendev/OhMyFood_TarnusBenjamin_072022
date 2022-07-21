@@ -1,1 +1,29 @@
 @import "./utils/-variables.scss";
+@import "./base/-fonts.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li,
+a,
+a:visited {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+}
+.footer {
+  color: white;
+  background-color: rgb(53, 53, 53);
+  margin: 0;
+  padding: 10px 0;
+  line-height: 1.75;
+  word-spacing: 3px;
+
+  &-img,
+  li {
+    margin-left: 20px;
+  }
+}
