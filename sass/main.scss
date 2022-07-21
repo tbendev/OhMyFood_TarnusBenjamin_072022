@@ -1,5 +1,8 @@
 @import "./utils/-variables.scss";
 @import "./base/-fonts.scss";
+@import "./layout/-header.scss";
+@import "./layout/-footer.scss";
+@import "./components/-button.scss";
 
 * {
   box-sizing: border-box;
@@ -11,19 +14,22 @@ a,
 a:visited {
   list-style: none;
   text-decoration: none;
-  color: inherit;
+  color: white;
   padding: 0;
 }
-.footer {
-  color: white;
-  background-color: rgb(53, 53, 53);
-  margin: 0;
-  padding: 10px 0;
-  line-height: 1.75;
-  word-spacing: 3px;
 
-  &-img,
-  li {
-    margin-left: 20px;
-  }
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+main {
+  margin-top: 67.7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }

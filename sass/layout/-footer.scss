@@ -1,0 +1,13 @@
+.footer {
+  width: 100%;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 10px 0;
+  line-height: 1.75;
+  word-spacing: 3px;
+
+  &-img,
+  li {
+    margin-left: 20px;
+  }
+}
