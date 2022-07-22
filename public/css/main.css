@@ -16,6 +16,7 @@ h2 {
   padding: 20px 20px 10px;
   text-align: center;
   box-shadow: 0px 10px 13px -7px lightgrey, 0px 8px 50px 3px rgba(0, 0, 0, 0);
+  z-index: 99999;
 }
 
 .fa-arrow-left {
@@ -34,7 +35,7 @@ h2 {
 }
 .footer-img,
 .footer li {
-  margin-left: 20px;
+  margin-left: 5%;
 }
 
 .button {
@@ -43,6 +44,12 @@ h2 {
   border-radius: 28px;
   padding: 16px 31px;
   font-weight: 600;
+  transition: all 0.5s;
+  margin-bottom: 20px;
+}
+.button > p {
+  margin: 0;
+  color: white;
 }
 
 .button:hover {
@@ -65,11 +72,9 @@ a:visited {
 }
 
 body {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  row-gap: 20px;
 }
 
 .main {
@@ -78,10 +83,12 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  row-gap: 20px;
 }
 
 .restaurants {
   min-width: 100%;
+  background-color: #eeeeee;
 }
 .restaurants--title {
   padding-left: 5%;
@@ -91,34 +98,76 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
   row-gap: 20px;
 }
 
 .restaurantsContainersCards a {
   width: 90%;
+  position: relative;
 }
 
 .restaurants__cards {
   box-shadow: 0px 10px 13px -7px grey, 0px 8px 50px 3px rgba(0, 0, 0, 0);
+  background-color: white;
   border-radius: 10px;
   max-height: 30%;
   display: flex;
   flex-direction: column;
 }
-.restaurants__cards > img {
+.restaurants__cards--header > img {
   width: 100%;
   max-height: 200px;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
+  object-position: center center;
+}
+.restaurants__cards--header > .news {
+  background-color: #99e2d0;
+  color: #3c5a52;
+  font-weight: 600;
+  text-align: center;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
 }
 .restaurants__cards--footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 20px;
 }
+.restaurants__cards--content p {
+  margin-top: 0;
+  font-weight: 200;
+}
+.restaurants__cards--content h4 {
+  margin-bottom: 0;
+}
+
 .favorite {
   align-self: center;
+}
+.favorite i.fa-solid {
+  display: none;
+  color: transparent;
+  background: linear-gradient(180deg, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.5s;
+}
+.favorite i.fa-regular {
+  transition: all 0.5s;
+}
+
+.favorite:hover i.fa-solid {
+  display: block;
+}
+.favorite:hover i.fa-regular {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -4,6 +4,12 @@
   border-radius: 28px;
   padding: 16px 31px;
   font-weight: 600;
+  transition: all 0.5s;
+  margin-bottom: 20px;
+  > p {
+    margin: 0;
+    color: white;
+  }
 }
 
 // Brighten up button on hover
