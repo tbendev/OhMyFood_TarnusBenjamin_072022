@@ -1,4 +1,5 @@
 @import "./utils/-variables.scss";
+@import "./utils/-mixin.scss";
 @import "./base/-fonts.scss";
 @import "./layout/-header.scss";
 @import "./layout/-footer.scss";
@@ -14,7 +15,7 @@ a,
 a:visited {
   list-style: none;
   text-decoration: none;
-  color: white;
+  color: inherit;
   padding: 0;
 }
 
@@ -26,10 +27,54 @@ body {
   row-gap: 20px;
 }
 
-main {
-  margin-top: 67.7px;
+.main {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.restaurants {
+  min-width: 100%;
+
+  &--title {
+    padding-left: 5%;
+  }
+}
+.restaurantsContainersCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+}
+.restaurantsContainersCards a {
+  width: 90%;
+}
+.restaurants__cards {
+  @include shadow(grey);
+  border-radius: 10px;
+  max-height: 30%;
+  display: flex;
+  flex-direction: column;
+
+  > img {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+  }
+
+  &--footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  &--content {
+  }
+}
+
+.favorite {
+  align-self: center;
 }
