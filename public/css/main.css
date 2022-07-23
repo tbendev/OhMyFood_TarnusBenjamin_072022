@@ -45,9 +45,8 @@ h2 {
   padding: 16px 31px;
   font-weight: 600;
   transition: all 0.5s;
-  margin-bottom: 20px;
 }
-.button > p {
+.button > span {
   margin: 0;
   color: white;
 }
@@ -57,38 +56,84 @@ h2 {
   box-shadow: 0px 10px 13px -7px #474646, 0px 8px 50px 3px rgba(0, 0, 0, 0);
 }
 
-* {
-  box-sizing: border-box;
+.mainHeading {
+  width: 100%;
+  text-align: center;
+  background-color: #fbf5f5;
+}
+.mainHeading__localisation {
+  padding: 15px 0;
+  width: 100%;
+  background-color: #dddddd;
+}
+.mainHeading__localisation > i {
+  margin-right: 10px;
+}
+.mainHeading__content {
+  padding: 0 5%;
+}
+.mainHeading__button {
+  padding: 50px 0px;
 }
 
-ul,
-li,
-a,
-a:visited {
-  list-style: none;
-  text-decoration: none;
-  color: inherit;
-  padding: 0;
+.functioning {
+  min-width: 100%;
+}
+.functioning--title {
+  padding-left: 5%;
 }
 
-body {
+.functioningContainersCards {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.main {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   row-gap: 20px;
+  font-weight: 500;
+}
+.functioningContainersCards .functioning__cards {
+  box-shadow: 0px 10px 13px -7px grey, 0px 8px 50px 3px rgba(0, 0, 0, 0);
+  position: relative;
+  background-color: #fbf5f5;
+  width: 90%;
+  max-width: 390px;
+  display: flex;
+  padding: 10px 0 10px 30px;
+  column-gap: 20px;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.functioningContainersCards .functioning__cards--numbers {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-50%);
+  padding: 5px 10px;
+  color: #ffffff;
+  background-color: #9356dc;
+  border-radius: 50%;
+}
+.functioningContainersCards .functioning__cards i {
+  color: #dddddd;
+  filter: contrast(10%);
+  align-self: center;
+  width: 20px;
+}
+.functioningContainersCards .functioning__cards:hover {
+  background-color: rgba(255, 121, 218, 0.2117647059);
+  cursor: pointer;
+}
+.functioningContainersCards .functioning__cards:hover i {
+  filter: none;
+  color: #9356dc;
+}
+
+.functioning__cards:last-of-type {
+  margin-bottom: 20px;
 }
 
 .restaurants {
   min-width: 100%;
-  background-color: #eeeeee;
+  background-color: #fbf5f5;
 }
 .restaurants--title {
   padding-left: 5%;
@@ -105,6 +150,7 @@ body {
 
 .restaurantsContainersCards a {
   width: 90%;
+  max-width: 500px;
   position: relative;
 }
 
@@ -112,13 +158,12 @@ body {
   box-shadow: 0px 10px 13px -7px grey, 0px 8px 50px 3px rgba(0, 0, 0, 0);
   background-color: white;
   border-radius: 10px;
-  max-height: 30%;
   display: flex;
   flex-direction: column;
 }
 .restaurants__cards--header > img {
   width: 100%;
-  max-height: 200px;
+  max-height: 150px;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
   object-position: center center;
@@ -168,6 +213,34 @@ body {
 }
 .favorite:hover i.fa-regular {
   display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li,
+a,
+a:visited {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  margin-top: 67px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

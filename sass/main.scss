@@ -4,6 +4,7 @@
 @import "./layout/-header.scss";
 @import "./layout/-footer.scss";
 @import "./components/-button.scss";
+@import "./layout/-indexSections.scss";
 
 * {
   box-sizing: border-box;
@@ -26,101 +27,9 @@ body {
 }
 
 .main {
-  margin-top: 80px;
+  margin-top: 67px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  row-gap: 20px;
-}
-
-// Section Restaurants + Cards
-.restaurants {
-  min-width: 100%;
-  background-color: #eeeeee;
-
-  &--title {
-    padding-left: 5%;
-  }
-}
-.restaurantsContainersCards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  padding-bottom: 50px;
-  row-gap: 20px;
-}
-.restaurantsContainersCards a {
-  width: 90%;
-  position: relative;
-}
-.restaurants__cards {
-  @include shadow(grey);
-  background-color: white;
-  border-radius: 10px;
-  max-height: 30%;
-  display: flex;
-  flex-direction: column;
-
-  &--header {
-    > img {
-      width: 100%;
-      max-height: 200px;
-      border-radius: 10px 10px 0 0;
-      object-fit: cover;
-      object-position: center center;
-    }
-    > .news {
-      background-color: $third-color;
-      color: #3c5a52;
-      font-weight: 600;
-      text-align: center;
-      width: 100px;
-      padding: 5px;
-      border-radius: 5px;
-      position: absolute;
-      right: 5%;
-      top: 5%;
-    }
-  }
-
-  &--footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-
-  &--content p {
-    margin-top: 0;
-    font-weight: 200;
-  }
-
-  &--content h4 {
-    margin-bottom: 0;
-  }
-}
-
-.favorite {
-  align-self: center;
-
-  i.fa-solid {
-    display: none;
-    color: transparent;
-    background: linear-gradient(180deg, $primary-color, $second-color);
-    background-clip: text;
-    -webkit-background-clip: text;
-    transition: all 0.5s;
-  }
-  i.fa-regular {
-    transition: all 0.5s;
-  }
-}
-.favorite:hover {
-  i.fa-solid {
-    display: block;
-  }
-  i.fa-regular {
-    display: none;
-  }
 }

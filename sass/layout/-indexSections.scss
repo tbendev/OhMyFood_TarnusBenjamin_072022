@@ -1,0 +1,176 @@
+// Section MainHeading
+.mainHeading {
+  width: 100%;
+  text-align: center;
+  background-color: #fbf5f5;
+
+  &__localisation {
+    padding: 15px 0;
+    width: 100%;
+    background-color: #dddddd;
+
+    > i {
+      margin-right: 10px;
+    }
+  }
+
+  &__content {
+    padding: 0 5%;
+  }
+
+  &__button {
+    padding: 50px 0px;
+  }
+}
+
+// Section Functioning + Cards
+.functioning {
+  min-width: 100%;
+
+  &--title {
+    padding-left: 5%;
+  }
+}
+
+.functioningContainersCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  font-weight: 500;
+
+  .functioning__cards {
+    @include shadow(grey);
+    position: relative;
+    background-color: #fbf5f5;
+    width: 90%;
+    max-width: 390px;
+    display: flex;
+    padding: 10px 0 10px 30px;
+    column-gap: 20px;
+    border-radius: 10px;
+    transition: all 0.5s;
+
+    &--numbers {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) translateX(-50%);
+      padding: 5px 10px;
+      color: #ffffff;
+      background-color: $primary-color;
+      border-radius: 50%;
+    }
+
+    i {
+      color: #dddddd;
+      filter: contrast(10%);
+      align-self: center;
+      width: 20px;
+    }
+
+    &:hover {
+      background-color: #ff79da36;
+      cursor: pointer;
+      i {
+        filter: none;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.functioning__cards:last-of-type {
+  margin-bottom: 20px;
+}
+
+// Section Restaurants + Cards
+.restaurants {
+  min-width: 100%;
+  background-color: #fbf5f5;
+
+  &--title {
+    padding-left: 5%;
+  }
+}
+.restaurantsContainersCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+  row-gap: 20px;
+}
+.restaurantsContainersCards a {
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+.restaurants__cards {
+  @include shadow(grey);
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &--header {
+    > img {
+      width: 100%;
+      max-height: 150px;
+      border-radius: 10px 10px 0 0;
+      object-fit: cover;
+      object-position: center center;
+    }
+    > .news {
+      background-color: $third-color;
+      color: #3c5a52;
+      font-weight: 600;
+      text-align: center;
+      width: 100px;
+      padding: 5px;
+      border-radius: 5px;
+      position: absolute;
+      right: 5%;
+      top: 5%;
+    }
+  }
+
+  &--footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  &--content p {
+    margin-top: 0;
+    font-weight: 200;
+  }
+
+  &--content h4 {
+    margin-bottom: 0;
+  }
+}
+
+.favorite {
+  align-self: center;
+
+  i.fa-solid {
+    display: none;
+    color: transparent;
+    background: linear-gradient(180deg, $primary-color, $second-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 0.5s;
+  }
+  i.fa-regular {
+    transition: all 0.5s;
+  }
+}
+.favorite:hover {
+  i.fa-solid {
+    display: block;
+  }
+  i.fa-regular {
+    display: none;
+  }
+}
