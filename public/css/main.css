@@ -6,6 +6,7 @@ body {
 h1,
 h2 {
   font-family: "Shrikhand", cursive;
+  letter-spacing: 1px;
 }
 
 .header {
@@ -45,6 +46,7 @@ h2 {
   padding: 16px 31px;
   font-weight: 600;
   transition: all 0.5s;
+  margin: 20px auto;
 }
 .button > span {
   margin: 0;
@@ -59,7 +61,6 @@ h2 {
 .mainHeading {
   width: 100%;
   text-align: center;
-  background-color: #fbf5f5;
 }
 .mainHeading__localisation {
   padding: 15px 0;
@@ -78,6 +79,7 @@ h2 {
 
 .functioning {
   min-width: 100%;
+  background-color: #ffffff;
 }
 .functioning--title {
   padding-left: 5%;
@@ -99,7 +101,7 @@ h2 {
   display: flex;
   padding: 10px 0 10px 30px;
   column-gap: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: all 0.5s;
 }
 .functioningContainersCards .functioning__cards--numbers {
@@ -133,7 +135,6 @@ h2 {
 
 .restaurants {
   min-width: 100%;
-  background-color: #fbf5f5;
 }
 .restaurants--title {
   padding-left: 5%;
@@ -156,7 +157,7 @@ h2 {
 
 .restaurants__cards {
   box-shadow: 0px 10px 13px -7px grey, 0px 8px 50px 3px rgba(0, 0, 0, 0);
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -194,10 +195,13 @@ h2 {
 }
 
 .favorite {
-  align-self: center;
+  position: relative;
 }
 .favorite i.fa-solid {
-  display: none;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  opacity: 0;
   color: transparent;
   background: linear-gradient(180deg, #9356dc, #ff79da);
   background-clip: text;
@@ -205,14 +209,16 @@ h2 {
   transition: all 0.5s;
 }
 .favorite i.fa-regular {
-  transition: all 0.5s;
+  position: absolute;
+  right: 0;
+  top: 20px;
 }
 
 .favorite:hover i.fa-solid {
-  display: block;
+  opacity: 100;
 }
 .favorite:hover i.fa-regular {
-  display: none;
+  opacity: 0;
 }
 
 * {
@@ -230,6 +236,7 @@ a:visited {
 }
 
 body {
+  background-color: aqua;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -239,8 +246,100 @@ body {
   margin-top: 67px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  background-color: #fbf5f5;
+}
+
+.heading--img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 200px;
+}
+
+.menu {
+  min-width: 100%;
+  background-color: #fbf5f5;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 30px;
+  transform: translateY(-50px);
+}
+.menu__heading {
+  display: flex;
+  padding-left: 7%;
+  padding-right: 7%;
+  justify-content: space-between;
+}
+
+.menu__containerCards {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  row-gap: 20px;
+}
+.menu__containerCards h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-left: 8%;
+  padding-bottom: 10px;
+  position: relative;
+}
+.menu__containerCards h3::after {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 8%;
+  bottom: 0;
+}
+
+.menu__cards {
+  box-shadow: 0px 10px 13px -7px grey, 0px 8px 50px 3px rgba(0, 0, 0, 0);
+  background-color: #ffffff;
+  width: 85%;
+  max-width: 390px;
+  align-self: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.menu__cards--content {
+  flex-basis: 80%;
+  margin: 5%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__cards--content h4,
+.menu__cards--content p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__cards--price {
+  margin: 5%;
+  align-self: end;
+}
+.menu__cards--check {
+  margin-right: -30%;
+  padding-top: 6%;
+  padding-bottom: 6%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #99e2d0;
+  border-radius: 0 20px 20px 0;
+}
+.menu__cards:hover .menu__cards--check {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

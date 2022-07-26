@@ -2,7 +2,6 @@
 .mainHeading {
   width: 100%;
   text-align: center;
-  background-color: #fbf5f5;
 
   &__localisation {
     padding: 15px 0;
@@ -26,6 +25,7 @@
 // Section Functioning + Cards
 .functioning {
   min-width: 100%;
+  background-color: #ffffff;
 
   &--title {
     padding-left: 5%;
@@ -48,7 +48,7 @@
     display: flex;
     padding: 10px 0 10px 30px;
     column-gap: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: all 0.5s;
 
     &--numbers {
@@ -87,7 +87,6 @@
 // Section Restaurants + Cards
 .restaurants {
   min-width: 100%;
-  background-color: #fbf5f5;
 
   &--title {
     padding-left: 5%;
@@ -108,7 +107,7 @@
 }
 .restaurants__cards {
   @include shadow(grey);
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -151,11 +150,15 @@
   }
 }
 
+// Heart
 .favorite {
-  align-self: center;
+  position: relative;
 
   i.fa-solid {
-    display: none;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    opacity: 0;
     color: transparent;
     background: linear-gradient(180deg, $primary-color, $second-color);
     background-clip: text;
@@ -163,14 +166,16 @@
     transition: all 0.5s;
   }
   i.fa-regular {
-    transition: all 0.5s;
+    position: absolute;
+    right: 0;
+    top: 20px;
   }
 }
 .favorite:hover {
   i.fa-solid {
-    display: block;
+    opacity: 100;
   }
   i.fa-regular {
-    display: none;
+    opacity: 0;
   }
 }
