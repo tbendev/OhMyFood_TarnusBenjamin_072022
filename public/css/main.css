@@ -205,8 +205,8 @@ h2 {
   opacity: 0;
   color: transparent;
   background: linear-gradient(180deg, #9356dc, #ff79da);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   transition: all 0.5s;
 }
 .favorite i.fa-regular {
