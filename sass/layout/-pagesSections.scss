@@ -164,16 +164,19 @@
     background: linear-gradient(180deg, $primary-color, $second-color);
     background-clip: text;
     -webkit-background-clip: text;
-    transition: all 0.5s;
+    transition: all 1s ease-in-out;
+    transform: scale(0);
   }
   i.fa-regular {
     position: absolute;
     right: 0;
     top: 20px;
+    transition: all 1s ease-in-out;
   }
 }
 .favorite:hover {
   i.fa-solid {
+    transform: scale(1);
     opacity: 100;
   }
   i.fa-regular {
@@ -223,7 +226,7 @@
       content: "";
       width: 40px;
       height: 4px;
-      background-color: #99e2d0;
+      background-color: $third-color;
       position: absolute;
       left: 8%;
       bottom: 0;
@@ -274,11 +277,21 @@
     color: #ffffff;
     background-color: $third-color;
     border-radius: 0 20px 20px 0;
+    transition: all 1s ease-in-out;
+
+    > .fa-circle-check {
+      transform: rotate(-180deg);
+      transition: all 1s ease-in-out;
+    }
   }
 
   &:hover {
     .menu__cards--check {
       margin-right: 0;
+      transform: translateX(0);
+    }
+    .fa-circle-check {
+      transform: rotate(-360deg);
     }
   }
 }

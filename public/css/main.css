@@ -205,17 +205,20 @@ h2 {
   opacity: 0;
   color: transparent;
   background: linear-gradient(180deg, #9356dc, #ff79da);
-  -webkit-background-clip: text;
   background-clip: text;
-  transition: all 0.5s;
+  -webkit-background-clip: text;
+  transition: all 1s ease-in-out;
+  transform: scale(0);
 }
 .favorite i.fa-regular {
   position: absolute;
   right: 0;
   top: 20px;
+  transition: all 1s ease-in-out;
 }
 
 .favorite:hover i.fa-solid {
+  transform: scale(1);
   opacity: 100;
 }
 .favorite:hover i.fa-regular {
@@ -309,9 +312,18 @@ h2 {
   color: #ffffff;
   background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
+  transition: all 1s ease-in-out;
+}
+.menu__cards--check > .fa-circle-check {
+  transform: rotate(-180deg);
+  transition: all 1s ease-in-out;
 }
 .menu__cards:hover .menu__cards--check {
   margin-right: 0;
+  transform: translateX(0);
+}
+.menu__cards:hover .fa-circle-check {
+  transform: rotate(-360deg);
 }
 
 .loader {
@@ -387,7 +399,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #fbf5f5;
+  background-color: #f5fbf5;
 }
 
 /*# sourceMappingURL=main.css.map */
