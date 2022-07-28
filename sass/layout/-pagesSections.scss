@@ -195,9 +195,9 @@
 // MENU CONTAINER + CARDS all pages
 .menu {
   background-color: #fbf5f5;
-  border-top-left-radius: 50px;
+  border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  transform: translateY(-50px);
+  margin-top: -50px;
   width: 100vw;
 
   &__heading {
@@ -206,6 +206,12 @@
     padding-left: 7%;
     padding-right: 7%;
     column-gap: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 80%;
+    height: 100%;
   }
 }
 .menu__containerCards {
@@ -237,6 +243,7 @@
     padding-left: 8%;
     padding-bottom: 10px;
     position: relative;
+    margin-top: 50px;
 
     &::after {
       content: "";
@@ -327,4 +334,9 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+.command {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
