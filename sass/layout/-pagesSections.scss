@@ -208,12 +208,7 @@
     column-gap: 30px;
   }
 }
-@media screen and (min-width: 768px) {
-  .menu {
-    width: 80%;
-    height: 100%;
-  }
-}
+
 .menu__containerCards {
   max-width: 100%;
   display: flex;
@@ -260,7 +255,7 @@
   @include shadow(grey);
   background-color: #ffffff;
   width: 90%;
-  max-height: 100px;
+  max-height: 80px;
   align-self: center;
   border-radius: 20px;
   display: flex;
@@ -339,4 +334,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 80%;
+  }
+  .menu__containerCards {
+    justify-content: center;
+    align-items: center;
+    h3 {
+      padding-left: 0;
+
+      &::after {
+        left: 0;
+      }
+    }
+  }
+  .menu__cards--price {
+    margin: 0;
+    align-self: center;
+    padding-right: 10px;
+  }
+  .menu__cards--check {
+    width: 10%;
+    margin-right: -10%;
+  }
 }
