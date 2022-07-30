@@ -3,7 +3,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1,
 h2 {
   font-family: "Shrikhand", cursive;
   letter-spacing: 1px;
@@ -46,7 +45,7 @@ h2 {
   padding: 16px 31px;
   font-weight: 600;
   transition: all 0.5s;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 .button > span {
   margin: 0;
@@ -91,6 +90,7 @@ h2 {
   align-items: center;
   row-gap: 20px;
   font-weight: 500;
+  margin-bottom: 50px;
 }
 .functioningContainersCards .functioning__cards {
   box-shadow: 0px 10px 13px -7px grey, 0px 8px 50px 3px rgba(0, 0, 0, 0);
@@ -103,6 +103,10 @@ h2 {
   column-gap: 20px;
   border-radius: 20px;
   transition: all 0.5s;
+}
+.functioningContainersCards .functioning__cards p {
+  display: flex;
+  font-size: small;
 }
 .functioningContainersCards .functioning__cards--numbers {
   position: absolute;
@@ -129,10 +133,18 @@ h2 {
   color: #9356dc;
 }
 
-.functioning__cards:last-of-type {
-  margin-bottom: 20px;
+@media screen and (min-width: 768px) {
+  h3 {
+    padding-left: 0;
+    text-align: center;
+  }
+  .functioning {
+    padding-bottom: 20px;
+  }
+  .functioning--title {
+    padding: 20px 0;
+  }
 }
-
 .restaurants {
   min-width: 100%;
 }
@@ -142,6 +154,7 @@ h2 {
 
 .restaurantsContainersCards {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
@@ -194,6 +207,23 @@ h2 {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurants {
+    min-width: 0;
+    max-width: 80%;
+  }
+  .restaurantsContainersCards {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  .restaurantsContainersCards a {
+    width: 500px;
+  }
+  .restaurants--title {
+    padding: 20px 0;
+  }
+}
 .favorite {
   position: relative;
   cursor: pointer;
@@ -244,7 +274,7 @@ h2 {
   justify-content: space-between;
   padding-left: 7%;
   padding-right: 7%;
-  column-gap: 30px;
+  column-gap: 40px;
 }
 
 .menu__containerCards {
