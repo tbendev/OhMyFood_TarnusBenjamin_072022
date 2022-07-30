@@ -1,0 +1,19 @@
+.button {
+  @include shadow(#808080);
+  background: linear-gradient(to bottom, $second-color, $primary-color);
+  border-radius: 28px;
+  padding: 16px 31px;
+  font-weight: 600;
+  transition: all 0.5s;
+  margin: 50px auto;
+  > span {
+    margin: 0;
+    color: white;
+  }
+}
+
+// Brighten up button on hover
+.button:hover {
+  filter: brightness(1.1);
+  @include shadow(#474646);
+}

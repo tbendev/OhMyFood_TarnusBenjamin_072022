@@ -1,1 +1,37 @@
 @import "./utils/-variables.scss";
+@import "./utils/-mixin.scss";
+@import "./base/-fonts.scss";
+@import "./layout/-header.scss";
+@import "./layout/-footer.scss";
+@import "./components/-button.scss";
+@import "./layout/-pagesSections.scss";
+@import "./pages/loader.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li,
+a,
+a:visited {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  margin-top: 67px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5fbf5;
+}
