@@ -3,9 +3,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h2 {
+h4 {
   font-family: "Shrikhand", cursive;
-  letter-spacing: 1px;
+  margin: 10px 0;
 }
 
 .header {
@@ -134,7 +134,7 @@ h2 {
 }
 
 @media screen and (min-width: 768px) {
-  h3 {
+  h2 {
     padding-left: 0;
     text-align: center;
   }
@@ -143,6 +143,7 @@ h2 {
   }
   .functioning--title {
     padding: 20px 0;
+    font-family: "roboto", sans-serif;
   }
 }
 .restaurants {
@@ -150,6 +151,7 @@ h2 {
 }
 .restaurants--title {
   padding-left: 5%;
+  font-family: "roboto", sans-serif;
 }
 
 .restaurantsContainersCards {
@@ -203,7 +205,7 @@ h2 {
   margin-top: 0;
   font-weight: 200;
 }
-.restaurants__cards--content h4 {
+.restaurants__cards--content h3 {
   margin-bottom: 0;
 }
 
@@ -275,6 +277,7 @@ h2 {
   padding-left: 7%;
   padding-right: 7%;
   column-gap: 40px;
+  font-family: "Shrikhand", cursive;
 }
 
 .menu__containerCards {
@@ -299,7 +302,7 @@ h2 {
   animation-duration: 3s;
   animation-name: slidein;
 }
-.menu__containerCards h3 {
+.menu__containerCards h2 {
   text-transform: uppercase;
   font-weight: 300;
   padding-left: 8%;
@@ -307,7 +310,7 @@ h2 {
   position: relative;
   margin-top: 50px;
 }
-.menu__containerCards h3::after {
+.menu__containerCards h2::after {
   content: "";
   width: 40px;
   height: 4px;
@@ -338,7 +341,7 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__cards--content h4,
+.menu__cards--content h3,
 .menu__cards--content p {
   margin: 0;
   white-space: nowrap;
@@ -402,10 +405,10 @@ h2 {
     justify-content: center;
     align-items: center;
   }
-  .menu__containerCards h3 {
+  .menu__containerCards h2 {
     padding-left: 0;
   }
-  .menu__containerCards h3::after {
+  .menu__containerCards h2::after {
     left: 0;
   }
   .menu__cards--price {
